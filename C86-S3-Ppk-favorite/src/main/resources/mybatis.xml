@@ -13,9 +13,9 @@
       <!-- type="POOLED" 数据源类型 连接池 -->
       <dataSource type="POOLED">
         <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://114.215.43.209/dp"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1/c86-s3-ppk-favorite"/>
         <property name="username" value="root"/>
-        <property name="password" value="WWWpzg1515"/>
+        <property name="password" value="a"/>
       </dataSource>
     </environment>
     
@@ -26,9 +26,9 @@
       <!-- type="POOLED" 数据源类型 连接池 -->
       <dataSource type="POOLED">
         <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://114.215.43.209/dp"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1/c86-s3-ppk-favorite"/>
         <property name="username" value="root"/>
-        <property name="password" value="WWWpzg1515"/>
+        <property name="password" value="a"/>
       </dataSource>
     </environment>
     
@@ -39,9 +39,9 @@
       <!-- type="POOLED" 数据源类型 连接池 -->
       <dataSource type="POOLED">
         <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://114.215.43.209/dp"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1/c86-s3-ppk-favorite"/>
         <property name="username" value="root"/>
-        <property name="password" value="WWWpzg1515"/>
+        <property name="password" value="a"/>
       </dataSource>
     </environment>
     
