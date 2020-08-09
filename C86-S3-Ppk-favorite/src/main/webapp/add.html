@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/axios.min.js"></script>
+</head>
+<body>
+
+<div id="div">
+	<form action="" method="post">
+		名称：<input type="text" v-model="flabel"><br>
+		网址：<input type="text" v-model="furl"><br>
+		描述：<input type="text" v-model="fdesc"><br>
+		分类：<input type="text" v-model="ftags"><br>
+		<input type="button" @click="add()" value="提交"> 
+		<input type="button" href="index.html"  value="取消"> 
+	</form>
+</div>
+
+<script type="text/javascript">
+var vue = new Vue({
+	el : "#div",
+	data : {
+		flabel : "",
+		furl : "",
+		fdesc : "",
+		ftags : "",
+	},
+	methods : {
+		add(){
+			axios({
+				url : "add.do",
+				params : {
+					flabel : this.flabel,
+					furl : this.furl,
+					fdesc : this.fdesc,
+					ftags : this.ftags,
+				}
+			}).then((res)=>{
+				alert(res.data);
+				if(res.data=="添加成功"){
+					window.close();
+					location.reload();
+				}
+			});
+		}
+	}
+});
+
+
+
+</script>
+
+
+</body>
+</html>

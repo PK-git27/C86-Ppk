@@ -19,4 +19,14 @@
     <servlet-name>QueryTagServlet</servlet-name>
     <url-pattern>/queryTags.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddFavServlet</display-name>
+    <servlet-name>AddFavServlet</servlet-name>
+    <servlet-class>com.yc.favorite.web.AddFavServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFavServlet</servlet-name>
+    <url-pattern>/AddFavServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

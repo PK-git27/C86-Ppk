@@ -17,10 +17,12 @@ public interface TagMapper {
 	@Update("update tag set tcount=tcount +1 where tname=#{tname}")
 	int updateCount(String tag);
     
-	@Select("select *from tag where tname=#{tname}")
+	@Select("select * from tag where tname=#{tname}")
 	Tag selectByName(String tag);
 	
 	@Select("select * from tag")
 	List<Tag> selectAll();
+	
+	
 
 }
