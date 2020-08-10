@@ -29,10 +29,28 @@ public class Board {
 	 * @param boardname
 	 * @param parentid
 	 */
-	public Board(Integer boardid, String boardname, Integer parentid) {
+	
+	
+	public Board(Integer boardid, String boardname, Integer parentid ) {
 		this.boardid = boardid;
 		this.boardname = boardname;
 		this.parentid = parentid;
+	}
+
+	public void setBoardid(Integer boardid) {
+		this.boardid = boardid;
+	}
+
+	public void setBoardname(String boardname) {
+		this.boardname = boardname;
+	}
+
+	public void setParentid(Integer parentid) {
+		this.parentid = parentid;
+	}
+
+	public Board() {
+		super();
 	}
 
 	public Integer getBoardid() {
