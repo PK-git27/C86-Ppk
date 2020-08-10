@@ -70,8 +70,19 @@
     	<property name="rows" >
     		<list>
     			<ref bean="user" ></ref>
-    			<ref bean="map" ></ref>
-    			<ref bean="set" ></ref>
+    			<map>
+	    			<entry key="0734">
+						<value>衡阳</value>
+					</entry>
+					<entry key="0731">
+						<value>长沙</value>
+					</entry>
+    			</map>
+    			<set>
+	    			<value type="int">100</value>
+					<ref bean="myUser" ></ref>
+					<value>呵呵</value>
+    			</set>
     		</list>
     	</property>
      </bean>
@@ -80,28 +91,6 @@
     	<property name="uname" value="华荣" ></property>
      </bean>
      
-      <bean id="map" class="java.util.Map">
-     	 <constructor-arg>
-    		<map>
-    			<entry key="0734">
-					<value>衡阳</value>
-				</entry>
-				<entry key="0731">
-					<value>长沙</value>
-				</entry>
-    		</map>
-    	</constructor-arg>
-      </bean>
-      
-       <bean id="set" class="java.util.Set">
-     	<constructor-arg>
-    		<set>
-    			<value>100</value>
-				<value>武松</value>
-				<value>呵呵</value>
-    		</set>
-    	</constructor-arg>
-      </bean>
      
      
      
