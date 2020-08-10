@@ -4,19 +4,20 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.yc.spring.bean.Person;
+import com.yc.spring.dao.BeanConfig;
 import com.yc.spring.dao.UserDao;
 
-public class HelloTest {
+public class HelloTestForAnno {
 	
-	private ClassPathXmlApplicationContext ctx;
+	private AnnotationConfigApplicationContext ctx;
 	
 	@Before
 	public void before() {
 		ctx =
-				new ClassPathXmlApplicationContext("beans.xml");
+				new AnnotationConfigApplicationContext(BeanConfig.class);
 	}
 	
 	@After
@@ -27,26 +28,6 @@ public class HelloTest {
 	
 	@Test
 	public void test() {
-		
-		/**
-		 * Spring 框架解决的问题
-		 * Servlet
-		 * 		UserBiz ubiz = new UserBiz();
-		 * 1.new  ==>  创建对象  ==>  内存中创占用储对象的空间
-		 * 		每次new都会创建一个新的对象 ==> 内存消耗大
-		 * 		解决的方式 使用对象池
-		 * 		对象池.get对象 获取对象
-		 * 2.耦合性问题
-		 * 
-		 * 
-		 * 
-		 */
-		
-		
-		//从soring框架中获取一个hello对象
-		//创建spring容器对象
-		ClassPathXmlApplicationContext ctx =
-				new ClassPathXmlApplicationContext("beans.xml");
 		
 		Hello h = (Hello) ctx.getBean("hello");
 		
@@ -59,11 +40,6 @@ public class HelloTest {
 	@Test
 	public void test1() {
 		
-		
-		//从soring框架中获取一个hello对象
-		//创建spring容器对象
-		ClassPathXmlApplicationContext ctx =
-				new ClassPathXmlApplicationContext("beans.xml");
 		
 		UserDao udao1 = (UserDao) ctx.getBean("mdao");
 		UserDao udao2 = (UserDao) ctx.getBean("odao");
@@ -137,6 +113,9 @@ public class HelloTest {
 		
 	}
 	
+	/**
+	 * 懒加载
+	 */
 	@Test
 	public void test8() {
 		System.out.println("================test8====================");
@@ -144,7 +123,9 @@ public class HelloTest {
 		h0.sayHello();
 		
 	}
-	
+	/**
+	 * 生命周期
+	 */
 	@Test
 	public void test9() {
 		Hello h0 = (Hello)ctx.getBean("hello3");
@@ -161,6 +142,5 @@ public class HelloTest {
 		Assert.assertEquals("鲁智深",p.getFriend().getName());
 		
 	}
-	
-	
+
 }
