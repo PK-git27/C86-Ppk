@@ -1,15 +1,21 @@
 package com.yc.cinema.web;
 
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 import com.yc.cinema.biz.HallBiz;
 import com.yc.cinema.biz.MovieBiz;
 import com.yc.cinema.biz.UserBiz;
-
+@Controller
 public class IndexAction {
 	
+	@Autowired
 	private UserBiz ubiz;
-	
+	@Resource
 	private MovieBiz mbiz;
-	
+	@Resource
 	private HallBiz hbiz;
 
 	public UserBiz getUbiz() {
