@@ -3,6 +3,7 @@ package com.yc.spring.dao;
 import java.util.ArrayList;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
@@ -16,10 +17,11 @@ import com.yc.spring.bean.Person;
  *
  */
 @Configuration    //IOC容器配置类的注释  ==> beans.xml
+@ComponentScan("com.yc.spring")
 public class BeanConfig {
 	
 	//xml中的每一个bean 对应java的一个方法, 这个方法返回bean对象
-	@Bean(name="odao")
+	/*@Bean(name="odao")
 	public OracleUserDao getOracleUserDao() {
 		
 		return new OracleUserDao();
@@ -29,7 +31,7 @@ public class BeanConfig {
 	public MySQLUserDao getMySQLUserDao() {
 		
 		return new MySQLUserDao();
-	}
+	}*/
 	
 	@Bean(name="hello")
 	public Hello getHello() {
