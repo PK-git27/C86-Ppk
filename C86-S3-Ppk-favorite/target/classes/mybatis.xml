@@ -2,6 +2,7 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
   <!-- 唯一的根标签 -->
 <configuration>
 <!-- 数据环境 -->
@@ -18,6 +19,7 @@
         <property name="password" value="a"/>
       </dataSource>
     </environment>
+    
     
     <!-- 测试环境 -->
     <environment id="test">

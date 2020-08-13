@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import com.yc.spring.bmi.BmiFilter;
 import com.yc.spring.bmi.Container;
@@ -33,13 +34,14 @@ public class BmiBeanConfig {
 	
 	
 	@Bean
+	@Primary
 	public Container getContainer() throws Exception {
 		Person p0 = new Person();
-		p0.setName("宋江");
+		p0.setName("燕青");
 		p0.setHeight(178);
 		p0.setWeight(70);
 		Person p1 = new Person();
-		p1.setName("燕青");
+		p1.setName("宋江");
 		p1.setHeight(116);
 		p1.setWeight(50);
 		Person p2 = new Person();
