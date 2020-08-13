@@ -13,6 +13,7 @@ public class Account {
 	private Integer id;		// 主键
 	private String name;	// 姓名
 	private Double money;	// 余额
+	static int count=1;
 	
 	public Integer getId() {
 		return id;
@@ -32,6 +33,16 @@ public class Account {
 	public void setMoney(Double money) {
 		this.money = money;
 	}
+	
+	
+	public Account() {
+	}
+	public Account(Integer id, String name, Double money) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.money = money;
+	}
 	/**
 	 * 这是一个不完整的单例模式，少了私有的构造方法
 	 */
@@ -42,6 +53,16 @@ public class Account {
 		}
 		return singleAccount;
 	}
+	private static Account singleAccount1; 
+	public static Account getAccount() {
+		if(count <= 4) {
+			singleAccount1 = new Account();
+		}
+		count++;	
+		return singleAccount1;
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Account [id=" + id + ", name=" + name + ", money=" + money + "]";

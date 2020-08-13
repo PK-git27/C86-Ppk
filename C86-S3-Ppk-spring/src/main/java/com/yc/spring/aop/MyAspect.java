@@ -30,14 +30,14 @@ public class MyAspect {
 		System.out.println("=========后置增强=========");
 	}
 	
-	@AfterReturning("aspect1()")
-	public void afterReturning(JoinPoint jp) {
-		System.out.println("=========返回增强=========");
+	@AfterReturning(value="aspect1()",returning = "ret")
+	public void afterReturning(JoinPoint jp,Object ret) {
+		System.out.println("=========返回增强====="+ ret +"====");
 	}
 	
-	@AfterThrowing("aspect1()")
-	public void afterThrowing(JoinPoint jp) {
-		System.out.println("=========异常增强=========");
+	@AfterThrowing(value="aspect1()",throwing = "e")
+	public void afterThrowing(JoinPoint jp,Exception e) {
+		System.out.println("=========异常增强===="+e.getMessage()+"=====");
 	}
 	/**
 	 * 环绕增强，业务方法需要我们自己执行
@@ -57,5 +57,10 @@ public class MyAspect {
 		return ret;
 	}
 	
+	//如果不拦截hello 那么hello对象就是被new出来的
+	@After("execution( * com.yc.spring.Hello.*(..))")
+	public void afertForHello() {
+		System.out.println("===================Hello后置增强====================");
+	}
 	
 }

@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.yc.spring.bean.Person;
 import com.yc.spring.dao.UserDao;
 
 @RunWith(SpringRunner.class)
@@ -17,6 +18,10 @@ public class AOPTest {
 	private UserDao mdao;
 	@Resource
 	private UserDao odao;
+	@Resource
+	private Hello hello;
+	@Resource
+	private Person person;
 	
 	@Test
 	public void test1() {
@@ -25,5 +30,13 @@ public class AOPTest {
 		System.out.println("========2========");
 		mdao.selectUserId("");
 		System.out.println("========3========");
+	}
+	
+	@Test
+	public void test2() {
+		System.out.println(mdao);
+		System.out.println(odao);
+		System.out.println(hello);
+		System.out.println(person);
 	}
 }

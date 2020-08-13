@@ -3,7 +3,10 @@ package com.yc.spring.bmi;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 //测量的容器
+@Repository
 public class Container {
 	// 测量设备
 	private IMeasurable measurer; 

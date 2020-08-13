@@ -1,5 +1,8 @@
 package com.yc.spring.bmi;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class Person {
 	private String name;
 	private double height;
