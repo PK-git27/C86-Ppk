@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 //测量的容器

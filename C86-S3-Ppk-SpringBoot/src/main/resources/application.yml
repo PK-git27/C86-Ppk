@@ -1,0 +1,39 @@
+# yml 文件不能使用制表符空格tab ， 只能使用普通空格表示缩进
+# 设置值 使用空格
+server:
+  port: 80
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1/c86-s2-ppk-damai?serverTimezone=UTC&CharsetEncoding=utf-8&useSSL=false
+    username: root
+    password: a
+    driver-class-name: com.mysql.jdbc.Driver
+    
+    
+#邮件发送 Yml 配置规则 ： 如果某个节点有重复配置情况,必须要合并
+  mail:
+    #邮箱服务器地址
+    host: smtp.qq.com
+    #用户名
+    username: 844160936@qq.com
+    #密码
+    password: fiiiyppnmcafbdjf
+    default-encoding: UTF-8
+    
+#日志配置
+logging:
+  level:
+    com:
+      yc:
+        C86S3PpkSpringBoot:
+          dao: debug
+          web: warn
+          
+
+    
+
+#以谁来发送邮件 ==> 用户自定义的属性
+mail:
+  fromMail:
+    addr: 844160936@qq.com
