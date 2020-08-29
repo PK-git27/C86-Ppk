@@ -10,4 +10,18 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
+	<dependencies>
+		<!-- Euraka 注册客户端依赖  -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		
+		<!-- 服务网关 zuul  -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+		</dependency>
+	</dependencies>
+	
 </project>
