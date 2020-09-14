@@ -50,7 +50,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		
+		<!-- 引入common 工程  -->
+		<dependency>
+			<groupId>com.yc</groupId>
+			<artifactId>C86-S3-Ppk-crbook-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
+		<!-- springboot 测试依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
 	</dependencies>
 	
 </project>
